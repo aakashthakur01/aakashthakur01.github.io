@@ -5,79 +5,95 @@
 }
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #f5f5f5;
+  background: #f9f9f9;
   color: #333;
-  line-height: 1.6;
+  scroll-behavior: smooth;
 }
 .container {
   width: 90%;
-  max-width: 1000px;
+  max-width: 1100px;
   margin: auto;
   padding: 40px 20px;
 }
-header {
-  background-color: #1f2937;
-  color: white;
-  text-align: center;
-  padding: 60px 20px;
+nav {
+  background: #1f2937;
+  color: #fff;
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
-header h1 {
-  font-size: 2.5rem;
-}
-header p {
-  font-size: 1.2rem;
-  margin-top: 10px;
-}
-.profile-pic {
-  width: 150px;
-  height: 150px;
-  background-color: #ccc;
-  border-radius: 50%;
-  margin: 30px auto;
-  background-size: cover;
-  background-position: center;
-}
-section {
-  padding: 40px 0;
-}
-h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-.skills-list {
+.nav-container {
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
 }
-.skills-list li {
-  background-color: #1f2937;
-  color: white;
-  padding: 10px 15px;
-  border-radius: 5px;
+nav ul {
+  display: flex;
+  gap: 20px;
+}
+nav ul li {
   list-style: none;
 }
-.project {
-  background: white;
-  padding: 20px;
-  margin-top: 20px;
-  border-left: 5px solid #1f2937;
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+section {
+  padding: 60px 0;
+}
+h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+.gallery {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.gallery-item {
+  background: #e1e1e1;
+  padding: 40px;
+  flex: 1 1 calc(33.333% - 20px);
+  text-align: center;
+  border-radius: 8px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+input, textarea {
+  padding: 10px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+button {
+  padding: 10px;
+  background: #1f2937;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
 }
 footer {
-  background-color: #1f2937;
-  color: white;
   text-align: center;
   padding: 20px;
+  background: #1f2937;
+  color: white;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  h1 {
-    font-size: 2rem;
+  .gallery-item {
+    flex: 1 1 100%;
   }
-  h2 {
-    font-size: 1.5rem;
-  }
-  .skills-list {
+  nav ul {
     flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
   }
 }
