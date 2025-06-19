@@ -1,55 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aakash Thakur | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <!-- AOS CSS CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aakash's Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 </head>
 <body>
 
-  <header>
-    <div class="container">
-      <h1>Aakash Thakur</h1>
-      <p>Student | Web Developer | Learner</p>
-      <!-- Image Placeholder -->
-      <div class="profile-pic" data-aos="fade-down">
-        <!-- Add your image in CSS using background-image OR <img> tag here -->
-      </div>
-    </div>
-  </header>
-
-  <section id="about" data-aos="fade-up">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>I am a passionate student learning web development and building creative websites. I love coding, solving problems, and creating meaningful digital experiences.</p>
-    </div>
-  </section>
-
-  <section id="skills" data-aos="fade-right">
-    <div class="container">
-      <h2>Skills</h2>
-      <ul class="skills-list">
-        <li>HTML5</li>
-        <li>CSS3</li>
-        <li>JavaScript</li>
-        <li>GitHub</li>
+  <nav>
+    <div class="container nav-container">
+      <h1>Aakash</h1>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
+  </nav>
+
+  <section id="home" data-aos="fade-up">
+    <div class="container">
+      <h2>Welcome to My Portfolio</h2>
+      <p>Hello! I'm Aakash Thakur, an aspiring developer and student based in Nepal.</p>
+    </div>
   </section>
 
-  <section id="projects" data-aos="fade-left">
+  <section id="about" data-aos="fade-right">
     <div class="container">
-      <h2>Projects</h2>
-      <div class="project">
-        <h3>Portfolio Website</h3>
-        <p>A responsive personal portfolio made with HTML, CSS and JavaScript.</p>
-      </div>
-      <div class="project">
-        <h3>To-Do List App</h3>
-        <p>Simple task manager with local storage using JavaScript.</p>
+      <h2>About Me</h2>
+      <p>I love building websites and learning new technologies. This site showcases my work and journey as a student developer.</p>
+    </div>
+  </section>
+
+  <section id="gallery" data-aos="fade-left">
+    <div class="container">
+      <h2>Gallery</h2>
+      <div class="gallery">
+        <!-- Placeholder boxes -->
+        <div class="gallery-item">Image 1</div>
+        <div class="gallery-item">Image 2</div>
+        <div class="gallery-item">Image 3</div>
       </div>
     </div>
   </section>
@@ -57,20 +50,25 @@
   <section id="contact" data-aos="fade-up">
     <div class="container">
       <h2>Contact Me</h2>
-      <p>Email: aakash@example.com</p>
-      <p>GitHub: <a href="https://github.com/aakashthakur01" target="_blank">aakashthakur01</a></p>
+      <form action="https://formsubmit.co/YOUR@EMAIL.COM" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+
+        <!-- Hidden fields -->
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_next" value="https://yourwebsite.com/thankyou.html" />
+      </form>
     </div>
   </section>
 
   <footer>
-    <p>© 2025 Aakash Thakur. All rights reserved.</p>
+    <p>© 2025 Aakash Thakur</p>
   </footer>
 
   <script src="script.js"></script>
-  <!-- AOS JS CDN -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+  <script>AOS.init();</script>
 </body>
 </html>
